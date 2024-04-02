@@ -20,13 +20,15 @@ require 'db.php';
 
 <body data-bs-theme="dark">
 
-    <div class="container m-5 p-4">
-        <ul class="list-unstyled">
+    <div class="container m-5 mx-auto p-4">
+
+        <h1 class="text-center mb-5">Movie List OOP</h1>
+        <ul class="list-unstyled d-flex flex-wrap" style='gap: 20px'>
             <?php
             foreach ($movies as $movie) {
 
                 echo "
-            <li>
+            <li class='p-4 bg-body-tertiary rounded-3' style='width: calc(100% / 4 - 20px / 4 * 3)'>
             <strong>Title:</strong><br>" . $movie->title . "<br><br><strong>Description:</strong><br>" . $movie->description . "<br><br><strong>Year:</strong><br>" . $movie->year . "<br>
             </li>";
 
