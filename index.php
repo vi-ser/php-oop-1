@@ -20,8 +20,19 @@ require 'db.php';
 
 <body data-bs-theme="dark">
 
-    <div class="container">
+    <div class="container m-5 p-4">
+        <ul class="list-unstyled">
+            <?php
+            foreach ($movies as $movie) {
 
+                echo "
+            <li>
+            <strong>Title:</strong><br>" . $movie->title . "<br><br><strong>Description:</strong><br>" . $movie->description . "<br><br><strong>Year:</strong><br>" . $movie->year . "<br>
+            </li>";
+
+            }
+            ?>
+        </ul>
     </div>
 
     <!-- bootstrap -->
